@@ -1,0 +1,66 @@
+<!--
+MIT License
+Copyright (c) [year] Zuora, Inc.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Payment HPF Demo</title>
+    <link href="../css/zuora.css" rel="stylesheet">
+    <!-- Step 1 - Import zuora payment sdk javascript file-->
+    <script src="https://js.zuora.com/payment/v3/zuora.js"></script>
+    <script src="checkout.js"></script>
+</head>
+
+<body onload="initialize()">
+<div class="mystore">
+    <header class="header">
+
+    </header>
+    <main class="container">
+        <section class="checkout">
+            <h2 class="checkout__title">Checkout</h2>
+            <div class="checkout__order-summary">
+                <h3 class="checkout__order-summary__title">Order summary</h3>
+                <div class="order-summary">
+                    <ul class="order-summary__list">
+                        <li class="order-summary__list__list-item"><img src="../static/06.png" alt="Headphones"
+                                                                        class="lazyload-image lazyload-image--loaded order-summary__list__list-item__image">
+                            <p class="order-summary__list__list-item__title">LastPass Premium</p>
+                            <p class="order-summary__list__list-item__price">$36.00</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="checkout__order-summary__footer"><span
+                        class="checkout__order-summary__footer__label">Total:</span><span
+                        class="checkout__order-summary__footer__amount">$36.00</span></div>
+            </div>
+            <div class="checkout__payment-form">
+                <h3 class="checkout__payment-form__title">Select your payment method</h3>
+                <div class="checkout__payment-form__container">
+                    <!-- Step 2-->
+                    <div id="zuora-payment-form">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+</body>
+</html>
